@@ -1,0 +1,92 @@
+{
+  "expo": {
+    "name": "QuickSell",
+    "slug": "quicksell",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android": {
+      "package": "com.quicksell.app",
+      "versionCode": 1,
+      "config": {
+        "googleMaps": {
+          "apiKey": "YOUR_GOOGLE_MAPS_API_KEY"
+        }
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.CAMERA_ROLL",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION"
+      ],
+      "useNextNotificationApi": true
+    },
+    "ios": {
+      "bundleIdentifier": "com.quicksell.app",
+      "buildNumber": "1",
+      "supportsTabletMode": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Camera is used to take photos of items to sell",
+        "NSPhotoLibraryUsageDescription": "Photo library access is needed to select item photos",
+        "NSLocationWhenInUseUsageDescription": "Location is used for local pickup options"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow QuickSell to access your camera to take photos of items"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow QuickSell to access your photos to sell items",
+          "savePhotosPermission": "Allow QuickSell to save photos to your library"
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#ffffff"
+        }
+      ],
+      [
+        "expo-file-system",
+        {}
+      ]
+    ],
+    "scheme": "quicksell",
+    "owner": "quicksell-team",
+    "runtimeVersion": "1.0.0",
+    "updates": {
+      "enabled": true,
+      "fallbackToCacheTimeout": 30000,
+      "url": "https://updates.expo.dev/quicksell"
+    },
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "icon": "./assets/icon.png",
+    "primaryColor": "#007AFF",
+    "notification": {
+      "icon": "./assets/notification-icon.png",
+      "color": "#007AFF"
+    },
+    "description": "QuickSell - Take a photo, list on 20+ marketplaces instantly!"
+  }
+}
